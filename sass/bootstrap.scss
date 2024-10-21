@@ -1,0 +1,310 @@
+/*!
+ * Bootstrap v5.0.2 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+// scss-docs-start import-stack
+// Configuration
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "utilities";
+
+// Layout & components
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "containers";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "accordion";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "alert";
+@import "progress";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "offcanvas";
+
+// Helpers
+@import "helpers";
+
+// Utilities
+@import "utilities/api";
+// scss-docs-end import-stack
+
+
+
+
+                                                            // mon css        
+
+@mixin titre{
+    font-weight: bold;
+        font-size: 36px;
+        margin-top: 10vh;
+        margin-bottom: 15vh;
+        margin-left: 7%;
+}
+//presentation
+
+.presentation{
+    width: 100%;
+    height: 100vh;
+    .apropos{
+        @include titre();
+    }
+    p{
+        width: 58%;
+        font-size: 35px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.navbar{
+    width: 100%;
+    height: 100vh;
+   .accueil{
+    height: 100%;
+    width: 100%;
+    .row{
+        height: 100%;
+        width: 105%;
+        h1{
+            margin-top: 11vh;
+            margin-left: 7%;
+            font:{
+                size: 90px;
+                weight: bold;
+            }
+        }
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+   }
+}
+
+.menu{
+    font-weight: bold;
+    width: 32px;
+    height: 32px;
+    margin-left: 1.2rem;
+    margin-top: 0.5rem;
+    font-size: xx-large;
+}
+
+.liste{
+    ul{
+        list-style: none;
+        width: 30%;
+        height: 60vh;
+        margin-top: 10vh;
+        margin-left: 18%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+
+.items{
+    a{
+        color: black;
+        font:{
+            size: 35px;
+            weight: bold;
+        }
+        text-decoration: none;
+        &:hover{
+            color: lighten(black, 60%);
+        }
+    }
+    list-style: none;
+}
+
+.realisation{
+    h3{
+        @include titre();
+    }
+    margin-top: 30vh;
+    .album{
+        margin-bottom: 20vh;
+    }
+}
+
+.competences{
+    h3{
+        @include titre();
+    }
+    height: 100vh;
+    .container{
+        width: 70%;
+        .images{
+            width: 100%;
+            height: 100%;
+            img{
+                width: 55px;
+                height: 60px;
+            }
+        }
+    }
+}
+.titre{
+    font-size: 30px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    height: 30vh;
+    h3{
+       margin-left: 10%;
+       margin-top: 6vh;
+    }
+    ul{
+        margin-left: 15%;
+        margin-top: 4vh;
+    }
+    .reseaux{
+        display: flex;
+        margin-top: 18vh;
+        width: 50%;
+        justify-content: space-between;
+        margin-left: 30%;
+        div{
+            width: 35px;
+            height: 42px;
+            svg{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+
+                                                     //responsive
+
+
+
+@media(max-width:768px){
+    .navbar{
+        .accueil{
+            .row{
+                h1{
+                    font-size: 80px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .photo{
+        a,h2{
+            display: none;
+        }
+    }
+    .presentation{
+        p{
+            font-size: 25px;
+            width: 60%;
+        }
+    }
+    .titre{
+        font-size: 20px;
+    }
+    .realisation{
+        margin-top: 50vh;
+        h3{
+            margin-top: 5vh;
+        }
+        .album{
+            margin-bottom: 0vh;
+        }
+    }
+}
+
+@media(max-width:576px){
+    .part1{
+        display: none;
+        background-color: yellow;
+    }
+    .photo{
+        position: relative;
+        img,a,.h1r{
+            position: absolute;
+            color: white;
+            svg{
+                color: white;
+            }
+        }
+        .h1r{
+            font-size: 48px;
+            font-weight: bold;
+            left: 8%;
+            right: auto;
+            top: 25vh;
+        }
+    }
+    .items{
+        ul{
+            width: 50%;
+        }
+        a{
+            font-size: 25px;
+        }
+    }
+    .presentation{
+        p{
+            font-size: 20px;
+            width: 75%;
+        }
+    }
+    .titre{
+        font-size: 15px;
+    }
+    .competences{
+        .container{
+            width: 80%;
+        }
+    }
+    .realisation{
+        margin-top: 100vh;
+        h3{
+            margin-top: -5vh;
+        }
+        .album{
+            margin-bottom: 0vh;
+        }
+    }
+    footer{
+        height: 50vh;
+        .reseaux{
+            margin-top: 7vh;
+        }
+        .contact{
+            margin-top: 7vh;
+        }
+    }
+}
