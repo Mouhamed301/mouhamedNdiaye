@@ -9888,13 +9888,15 @@ footer .reseaux div svg {
   height: 100%;
 }
 
+@media (min-width: 768px) {
+  .photo h2, .photo .h2 {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .navbar .accueil .row h1, .navbar .accueil .row .h1 {
     font-size: 80px;
     width: 100%;
-  }
-  .photo a, .photo h2, .photo .h2 {
-    display: none;
   }
   .presentation p {
     font-size: 25px;
@@ -9921,11 +9923,8 @@ footer .reseaux div svg {
   .photo {
     position: relative;
   }
-  .photo img, .photo a, .photo .h1r {
+  .photo img, .photo h2, .photo .h2 {
     position: absolute;
-    color: white;
-  }
-  .photo img svg, .photo a svg, .photo .h1r svg {
     color: white;
   }
   .photo .h1r {

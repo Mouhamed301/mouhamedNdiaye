@@ -209,6 +209,14 @@ footer{
 
 
 
+@media(min-width:768px){
+    .photo{
+        h2{
+            display: none;
+        }
+    }
+}
+
 @media(max-width:768px){
     .navbar{
         .accueil{
@@ -218,11 +226,6 @@ footer{
                     width: 100%;
                 }
             }
-        }
-    }
-    .photo{
-        a,h2{
-            display: none;
         }
     }
     .presentation{
@@ -252,12 +255,9 @@ footer{
     }
     .photo{
         position: relative;
-        img,a,.h1r{
+        img,h2{
             position: absolute;
             color: white;
-            svg{
-                color: white;
-            }
         }
         .h1r{
             font-size: 48px;
